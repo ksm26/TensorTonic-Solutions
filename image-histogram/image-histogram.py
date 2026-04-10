@@ -7,14 +7,8 @@ def image_histogram(image):
     listt = [0]*256
     list2 = []
     for row in image :
-        for i in row:
-            list2.append(i)
+        for pixel in row:
+            listt[pixel]+= 1
             
-    dictionary = Counter(list2)
-
-    for i in range(len(listt)):
-        if i in dictionary:
-            listt[i] = dictionary[i]
-
     return listt
     
