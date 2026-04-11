@@ -4,9 +4,5 @@ def remove_stopwords(tokens, stopwords):
     """
     # Your code here
     stopwords = set(stopwords)
-    res = []
-    for i in tokens:
-        if i not in stopwords:
-            res.append(i)
-    return res
+    return [i for i in tokens if i not in stopwords]
     
