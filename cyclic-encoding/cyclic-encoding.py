@@ -2,12 +2,9 @@ def cyclic_encoding(values, period):
     """
     Encode cyclic features as sin/cos pairs.
     """
-    # Write code here
     result = []
-
-    for v in values :
-        theta = 2*math.pi * v/period
-        
+    for v in values:
+        theta = 2*math.pi*v/period
         result.append([math.sin(theta), math.cos(theta)])
 
     return result
